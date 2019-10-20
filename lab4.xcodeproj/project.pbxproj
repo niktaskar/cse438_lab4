@@ -28,6 +28,7 @@
 		143909A1235C0DE2004AC84E /* Screen Shot 2019-10-19 at 10.35.43 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 143909A0235C0DE1004AC84E /* Screen Shot 2019-10-19 at 10.35.43 PM.png */; };
 		143909A4235C128D004AC84E /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 143909A2235C128D004AC84E /* bookmark.png */; };
 		143909A5235C128D004AC84E /* favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = 143909A3235C128D004AC84E /* favorites.png */; };
+		143909A7235C4F2C004AC84E /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143909A6235C4F2C004AC84E /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		143909A0235C0DE1004AC84E /* Screen Shot 2019-10-19 at 10.35.43 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2019-10-19 at 10.35.43 PM.png"; path = "../../../../../../../../../Desktop/Screen Shot 2019-10-19 at 10.35.43 PM.png"; sourceTree = "<group>"; };
 		143909A2235C128D004AC84E /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark.png; sourceTree = "<group>"; };
 		143909A3235C128D004AC84E /* favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorites.png; sourceTree = "<group>"; };
+		143909A6235C4F2C004AC84E /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				143909A0235C0DE1004AC84E /* Screen Shot 2019-10-19 at 10.35.43 PM.png */,
 				14390950235BA7B0004AC84E /* AppDelegate.swift */,
 				14390952235BA7B0004AC84E /* FirstViewController.swift */,
+				143909A6235C4F2C004AC84E /* MyCollectionViewCell.swift */,
 				14390954235BA7B0004AC84E /* SecondViewController.swift */,
 				1439099C235BCEE3004AC84E /* Movie.swift */,
 				1439099E235BCEFC004AC84E /* APIResults.swift */,
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143909A7235C4F2C004AC84E /* MyCollectionViewCell.swift in Sources */,
 				14390955235BA7B0004AC84E /* SecondViewController.swift in Sources */,
 				14390994235BBFE3004AC84E /* FMDatabasePool.m in Sources */,
 				1439099D235BCEE3004AC84E /* Movie.swift in Sources */,
