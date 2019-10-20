@@ -15,9 +15,19 @@
 		1439095D235BA7B1004AC84E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1439095B235BA7B1004AC84E /* LaunchScreen.storyboard */; };
 		14390968235BA7B1004AC84E /* lab4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14390967235BA7B1004AC84E /* lab4Tests.swift */; };
 		14390973235BA7B1004AC84E /* lab4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14390972235BA7B1004AC84E /* lab4UITests.swift */; };
-		14390981235BAA4A004AC84E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14390980235BAA4A004AC84E /* Movie.swift */; };
-		14390983235BAA6A004AC84E /* APIResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14390982235BAA6A004AC84E /* APIResults.swift */; };
 		14390985235BAED1004AC84E /* Favorite.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14390984235BAED1004AC84E /* Favorite.plist */; };
+		14390987235BBF1C004AC84E /* favoritesData.db in Resources */ = {isa = PBXBuildFile; fileRef = 14390986235BBF1C004AC84E /* favoritesData.db */; };
+		14390994235BBFE3004AC84E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439098B235BBFE2004AC84E /* FMDatabasePool.m */; };
+		14390995235BBFE3004AC84E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439098E235BBFE2004AC84E /* FMDatabaseQueue.m */; };
+		14390996235BBFE3004AC84E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439098F235BBFE2004AC84E /* FMResultSet.m */; };
+		14390997235BBFE3004AC84E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 14390990235BBFE2004AC84E /* FMDatabase.m */; };
+		14390998235BBFE3004AC84E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 14390992235BBFE2004AC84E /* FMDatabaseAdditions.m */; };
+		1439099B235BC058004AC84E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1439099A235BC058004AC84E /* libsqlite3.tbd */; };
+		1439099D235BCEE3004AC84E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1439099C235BCEE3004AC84E /* Movie.swift */; };
+		1439099F235BCEFC004AC84E /* APIResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1439099E235BCEFC004AC84E /* APIResults.swift */; };
+		143909A1235C0DE2004AC84E /* Screen Shot 2019-10-19 at 10.35.43 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 143909A0235C0DE1004AC84E /* Screen Shot 2019-10-19 at 10.35.43 PM.png */; };
+		143909A4235C128D004AC84E /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 143909A2235C128D004AC84E /* bookmark.png */; };
+		143909A5235C128D004AC84E /* favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = 143909A3235C128D004AC84E /* favorites.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +62,26 @@
 		1439096E235BA7B1004AC84E /* lab4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lab4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14390972235BA7B1004AC84E /* lab4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab4UITests.swift; sourceTree = "<group>"; };
 		14390974235BA7B1004AC84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14390980235BAA4A004AC84E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		14390982235BAA6A004AC84E /* APIResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResults.swift; sourceTree = "<group>"; };
 		14390984235BAED1004AC84E /* Favorite.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Favorite.plist; sourceTree = "<group>"; };
+		14390986235BBF1C004AC84E /* favoritesData.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = favoritesData.db; sourceTree = SOURCE_ROOT; };
+		14390988235BBFE1004AC84E /* lab4-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lab4-Bridging-Header.h"; sourceTree = "<group>"; };
+		14390989235BBFE1004AC84E /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		1439098A235BBFE1004AC84E /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		1439098B235BBFE2004AC84E /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		1439098C235BBFE2004AC84E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		1439098D235BBFE2004AC84E /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		1439098E235BBFE2004AC84E /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		1439098F235BBFE2004AC84E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		14390990235BBFE2004AC84E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		14390991235BBFE2004AC84E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		14390992235BBFE2004AC84E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		14390993235BBFE2004AC84E /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		1439099A235BC058004AC84E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		1439099C235BCEE3004AC84E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		1439099E235BCEFC004AC84E /* APIResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResults.swift; sourceTree = "<group>"; };
+		143909A0235C0DE1004AC84E /* Screen Shot 2019-10-19 at 10.35.43 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2019-10-19 at 10.35.43 PM.png"; path = "../../../../../../../../../Desktop/Screen Shot 2019-10-19 at 10.35.43 PM.png"; sourceTree = "<group>"; };
+		143909A2235C128D004AC84E /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark.png; sourceTree = "<group>"; };
+		143909A3235C128D004AC84E /* favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorites.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1439099B235BC058004AC84E /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +117,19 @@
 				14390966235BA7B1004AC84E /* lab4Tests */,
 				14390971235BA7B1004AC84E /* lab4UITests */,
 				1439094E235BA7B0004AC84E /* Products */,
+				1439098C235BBFE2004AC84E /* FMDatabase.h */,
+				14390990235BBFE2004AC84E /* FMDatabase.m */,
+				14390991235BBFE2004AC84E /* FMDatabaseAdditions.h */,
+				14390992235BBFE2004AC84E /* FMDatabaseAdditions.m */,
+				14390993235BBFE2004AC84E /* FMDatabasePool.h */,
+				1439098B235BBFE2004AC84E /* FMDatabasePool.m */,
+				14390989235BBFE1004AC84E /* FMDatabaseQueue.h */,
+				1439098E235BBFE2004AC84E /* FMDatabaseQueue.m */,
+				1439098A235BBFE1004AC84E /* FMDB.h */,
+				1439098D235BBFE2004AC84E /* FMResultSet.h */,
+				1439098F235BBFE2004AC84E /* FMResultSet.m */,
+				14390988235BBFE1004AC84E /* lab4-Bridging-Header.h */,
+				14390999235BC058004AC84E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,16 +146,20 @@
 		1439094F235BA7B0004AC84E /* lab4 */ = {
 			isa = PBXGroup;
 			children = (
+				143909A0235C0DE1004AC84E /* Screen Shot 2019-10-19 at 10.35.43 PM.png */,
 				14390950235BA7B0004AC84E /* AppDelegate.swift */,
 				14390952235BA7B0004AC84E /* FirstViewController.swift */,
-				14390980235BAA4A004AC84E /* Movie.swift */,
-				14390982235BAA6A004AC84E /* APIResults.swift */,
 				14390954235BA7B0004AC84E /* SecondViewController.swift */,
+				1439099C235BCEE3004AC84E /* Movie.swift */,
+				1439099E235BCEFC004AC84E /* APIResults.swift */,
 				14390956235BA7B0004AC84E /* Main.storyboard */,
+				143909A2235C128D004AC84E /* bookmark.png */,
+				143909A3235C128D004AC84E /* favorites.png */,
 				14390984235BAED1004AC84E /* Favorite.plist */,
 				14390959235BA7B1004AC84E /* Assets.xcassets */,
 				1439095B235BA7B1004AC84E /* LaunchScreen.storyboard */,
 				1439095E235BA7B1004AC84E /* Info.plist */,
+				14390986235BBF1C004AC84E /* favoritesData.db */,
 			);
 			path = lab4;
 			sourceTree = "<group>";
@@ -135,6 +180,14 @@
 				14390974235BA7B1004AC84E /* Info.plist */,
 			);
 			path = lab4UITests;
+			sourceTree = "<group>";
+		};
+		14390999235BC058004AC84E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1439099A235BC058004AC84E /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +258,7 @@
 				TargetAttributes = {
 					1439094C235BA7B0004AC84E = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					14390962235BA7B1004AC84E = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -242,8 +296,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				14390985235BAED1004AC84E /* Favorite.plist in Resources */,
+				143909A1235C0DE2004AC84E /* Screen Shot 2019-10-19 at 10.35.43 PM.png in Resources */,
 				1439095D235BA7B1004AC84E /* LaunchScreen.storyboard in Resources */,
+				143909A5235C128D004AC84E /* favorites.png in Resources */,
 				1439095A235BA7B1004AC84E /* Assets.xcassets in Resources */,
+				14390987235BBF1C004AC84E /* favoritesData.db in Resources */,
+				143909A4235C128D004AC84E /* bookmark.png in Resources */,
 				14390958235BA7B0004AC84E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,10 +328,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				14390955235BA7B0004AC84E /* SecondViewController.swift in Sources */,
+				14390994235BBFE3004AC84E /* FMDatabasePool.m in Sources */,
+				1439099D235BCEE3004AC84E /* Movie.swift in Sources */,
 				14390951235BA7B0004AC84E /* AppDelegate.swift in Sources */,
-				14390981235BAA4A004AC84E /* Movie.swift in Sources */,
+				14390997235BBFE3004AC84E /* FMDatabase.m in Sources */,
+				14390995235BBFE3004AC84E /* FMDatabaseQueue.m in Sources */,
 				14390953235BA7B0004AC84E /* FirstViewController.swift in Sources */,
-				14390983235BAA6A004AC84E /* APIResults.swift in Sources */,
+				14390996235BBFE3004AC84E /* FMResultSet.m in Sources */,
+				14390998235BBFE3004AC84E /* FMDatabaseAdditions.m in Sources */,
+				1439099F235BCEFC004AC84E /* APIResults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = lab4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,6 +520,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cse438.lab4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "lab4-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -465,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = lab4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,6 +540,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cse438.lab4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "lab4-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
