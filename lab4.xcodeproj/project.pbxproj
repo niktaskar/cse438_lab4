@@ -29,6 +29,8 @@
 		143909A4235C128D004AC84E /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 143909A2235C128D004AC84E /* bookmark.png */; };
 		143909A5235C128D004AC84E /* favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = 143909A3235C128D004AC84E /* favorites.png */; };
 		143909A7235C4F2C004AC84E /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143909A6235C4F2C004AC84E /* MyCollectionViewCell.swift */; };
+		143909A9235D0850004AC84E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143909A8235D0850004AC84E /* DetailViewController.swift */; };
+		143909AB235D2F5E004AC84E /* noImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 143909AA235D2F5E004AC84E /* noImage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		143909A2235C128D004AC84E /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark.png; sourceTree = "<group>"; };
 		143909A3235C128D004AC84E /* favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorites.png; sourceTree = "<group>"; };
 		143909A6235C4F2C004AC84E /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		143909A8235D0850004AC84E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		143909AA235D2F5E004AC84E /* noImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noImage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +165,10 @@
 				14390984235BAED1004AC84E /* Favorite.plist */,
 				14390959235BA7B1004AC84E /* Assets.xcassets */,
 				1439095B235BA7B1004AC84E /* LaunchScreen.storyboard */,
+				143909AA235D2F5E004AC84E /* noImage.jpg */,
 				1439095E235BA7B1004AC84E /* Info.plist */,
 				14390986235BBF1C004AC84E /* favoritesData.db */,
+				143909A8235D0850004AC84E /* DetailViewController.swift */,
 			);
 			path = lab4;
 			sourceTree = "<group>";
@@ -303,6 +309,7 @@
 				1439095D235BA7B1004AC84E /* LaunchScreen.storyboard in Resources */,
 				143909A5235C128D004AC84E /* favorites.png in Resources */,
 				1439095A235BA7B1004AC84E /* Assets.xcassets in Resources */,
+				143909AB235D2F5E004AC84E /* noImage.jpg in Resources */,
 				14390987235BBF1C004AC84E /* favoritesData.db in Resources */,
 				143909A4235C128D004AC84E /* bookmark.png in Resources */,
 				14390958235BA7B0004AC84E /* Main.storyboard in Resources */,
@@ -333,6 +340,7 @@
 				143909A7235C4F2C004AC84E /* MyCollectionViewCell.swift in Sources */,
 				14390955235BA7B0004AC84E /* SecondViewController.swift in Sources */,
 				14390994235BBFE3004AC84E /* FMDatabasePool.m in Sources */,
+				143909A9235D0850004AC84E /* DetailViewController.swift in Sources */,
 				1439099D235BCEE3004AC84E /* Movie.swift in Sources */,
 				14390951235BA7B0004AC84E /* AppDelegate.swift in Sources */,
 				14390997235BBFE3004AC84E /* FMDatabase.m in Sources */,

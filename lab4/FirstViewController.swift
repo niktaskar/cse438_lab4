@@ -59,18 +59,25 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UISearc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "theCell", for: indexPath) as! MyCollectionViewCell
+//        cell.activityIndicator
+        cell.activityIndicator.hidesWhenStopped = true
+        cell.activityIndicator.style = UIActivityIndicatorView.Style.gray
+        cell.addSubview(cell.activityIndicator)
+        cell.activityIndicator.startAnimating()
+        
 //        collectionView.reloadItems(at: [indexPath.row])
         cell.myLabel.text = movies[indexPath.row].title
-        if(indexPath.row < imageCache.count){
+        let path = movies[indexPath.row].poster_path
+        
+        if (path == "") {
+            cell.myImageView.image = UIImage(contentsOfFile: "noImage.jpg")
+        } else if (indexPath.row < imageCache.count){
+            print(indexPath.row)
             cell.myImageView.image = imageCache[indexPath.row]
         }
-        
+        cell.activityIndicator.stopAnimating()
         return cell
     }
-    
-//    func removeCells(count: Int){
-//
-//    }
     
     func grabData(title: String){
         let queryString = createQueryString(input: title)
@@ -93,16 +100,8 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UISearc
         for i in 0 ..< len{
             movies.append(fullMovieList[i])
         }
-//        for movie in movies{
-//            print(movie.title)
-//        }
-        
-//        collectionView.performBatchUpdates({
-//            let updateIndexPaths = Array(0...movies.count-1).map({IndexPath(item: $0, section:
-//                0)})
-//            collectionView.insertItems(at: updateIndexPaths)
-//        }, completion: nil)
-        
+//        print(movies[0])
+//        cacheImages()
     }
     
     func updateData(title: String){
@@ -124,24 +123,61 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UISearc
     }
     
     func cacheImages(){
-        var prevImage:UIImage = UIImage()
+        imageCache = []
+//        var prevImage:UIImage = UIImage()
         for item in movies{
 //            if item.poster_path != nil{
-            let url = URL(string: "http://image.tmdb.org/t/p/w185\(item.poster_path ?? "")")
-            let data = try? Data.init(contentsOf: url!)
-            if data != nil{
-                let image = UIImage(data: data!)
-                prevImage = image!
-                if !imageCache.contains(image!){
-                    imageCache.append(image!)
+//            print(item.poster_path)
+            let path = item.poster_path ?? ""
+            if path != ""{
+                let url = URL(string: "http://image.tmdb.org/t/p/w185\(path)")
+                let data = try? Data.init(contentsOf: url!)
+                if data != nil{
+                    let image = UIImage(data: data!)
+//                    prevImage = image!
+                    if !imageCache.contains(image!){
+                        imageCache.append(image!)
+                    }
+                } else {
+//                    imageCache.append(prevImage)
+                    print("No Image")
                 }
-            } else {
-                imageCache.append(prevImage)
+                
             }
 //                if !imageCache.contains(image!){
             
 //                }
 //            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let movieCell: MyCollectionViewCell = (sender as? MyCollectionViewCell)!
+        if let collectionView: UICollectionView = movieCell.superview as? UICollectionView {
+            if let destination = segue.destination as? DetailViewController{
+//                destination.myTitle = movies[collectionView.tag+1].title
+                destination.myTitle = movieCell.myLabel.text ?? ""
+                var theMovie: Movie?
+                for movie in movies{
+                    if movie.title == movieCell.myLabel.text {
+                        theMovie = movie
+                        break;
+                    }
+                }
+                
+                destination.myRelease = "Released: \(theMovie!.release_date)"
+//                    ?? "Released: Not Yet Released"
+                destination.myRating = "Rating: \(theMovie!.vote_average)"
+//                    ?? "Rating: N/A"
+                destination.myScore = "Votes: \(theMovie!.vote_count!)"
+//                    ?? "Votes: N/A"
+                
+                let url = URL(string: "http://image.tmdb.org/t/p/w500\(theMovie!.poster_path ?? "")")
+                let data = try? Data.init(contentsOf: url!)
+                if(data != nil){
+                    destination.bigImage = UIImage(data: data!)
+                }
+            }
         }
     }
     

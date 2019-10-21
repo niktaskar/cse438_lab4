@@ -83,6 +83,7 @@ class SecondViewController: UIViewController, UITableViewDataSource {
                 print("Error \(error)")
             }
         }
+        contactDB.close()
     }
     
     func deleteDB(title: String){
@@ -96,7 +97,7 @@ class SecondViewController: UIViewController, UITableViewDataSource {
             return
         } else {
             do {
-                let results = try contactDB.executeStatements("DELETE FROM movies WHERE title='\(title)'")
+                let results = try contactDB.executeUpdate("DELETE FROM movies WHERE title=?", withArgumentsIn: ["\(title)"])
                 
                 if(results != nil ){
                     print("deleted")
@@ -105,7 +106,9 @@ class SecondViewController: UIViewController, UITableViewDataSource {
                 print("Error \(error)")
             }
         }
+        contactDB.close()
     }
+
 }
 
 
