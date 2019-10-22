@@ -14,6 +14,8 @@ class SecondViewController: UIViewController, UITableViewDataSource {
 //    var favorites: [String] = []
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -43,6 +45,7 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     }
     
     func loadData(){
+        favorites = []
         let dbPath = Bundle.main.path(forResource: "favoritesData", ofType: "db")
         
         let contactDB = FMDatabase(path: dbPath)
@@ -87,7 +90,11 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     }
     
     func deleteDB(title: String){
-        print(title)
+        for i in 0 ..< favorites.count {
+            if favorites[i].title == title{
+                favorites.remove(at: i)
+            }
+        }
         let dbPath = Bundle.main.path(forResource: "favoritesData", ofType: "db")
         
         let contactDB = FMDatabase(path: dbPath)
@@ -107,6 +114,11 @@ class SecondViewController: UIViewController, UITableViewDataSource {
             }
         }
         contactDB.close()
+    }
+    
+    @IBAction func refreshList(_ sender: Any) {
+        loadData()
+        tableView.reloadData()
     }
 
 }

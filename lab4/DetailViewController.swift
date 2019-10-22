@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import SafariServices
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var favoritesButton: UIButton!
@@ -28,6 +28,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var ratingLabel: UILabel!
     
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBOutlet weak var moreInfoButton: UIButton!
+    
+    @IBOutlet weak var savePosterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,5 +63,32 @@ class DetailViewController: UIViewController {
             }
         }
         contactDB.close()
+    }
+    
+    func getURL() -> String{
+        let title = titleLabel.text!
+        var queryString = ""
+        for char in title{
+            if char == " "{
+                queryString = "\(queryString)+"
+            }else {
+                queryString = "\(queryString)\(char)"
+            }
+        }
+        var url = "https://www.themoviedb.org/search?query=\(queryString)&language=en-US"
+        
+        return url
+    }
+    
+    @IBAction func getMoreInfo(_ sender: Any) {
+        let theUrl = getURL()
+        let svc = SFSafariViewController(url: URL(string: theUrl)!)
+        self.present(svc, animated: true, completion: nil)
+    }
+    
+    @IBAction func saveImage(_ sender: Any) {
+        var image = movieImage
+        UIImageWriteToSavedPhotosAlbum(movieImage.image!, nil, nil, nil)
+
     }
 }
